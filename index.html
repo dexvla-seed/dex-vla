@@ -328,9 +328,27 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Human-like dexterous manipulation remains a critical challenge for general-purpose robots. While recent Vision-Language-Action (VLA) models show promise in learning flexible skills from demonstrations, their effectiveness is constrained by the scarcity of high-quality training data. Existing data collection methods present significant limitations: fully manual teleoperation imposes excessive cognitive load on operators, while automated planning often yields unnatural motions with limited diversity. To address these challenges, we introduce a Shared Autonomy framework by decoupling global arm motion from dexterous hand control. In this framework, a human operator provides high-level arm guidance via VR teleoperation, while an autonomous DexGrasp-VLA policy serves as an AI Copilot, controlling the five-finger hand with real-time tactile and visual feedback to achieve force-adaptive grasping. This division of labor dramatically reduces human effort while enabling efficient collection of high-quality, coordinated arm-hand demonstrations. Leveraging these demonstrations, we train an end-to-end VLA policy enhanced with a novel Arm-Hand Feature Enhancement module. This architecture explicitly models the distinct dynamics of macro (arm) and micro (hand) movements by maintaining shared representations alongside separate arm and hand latent features, resulting in more natural and robust coordination. Furthermore, our Corrective Teleoperation system enables continuous policy improvement through failure-recovery demonstrations. Experimental results demonstrate that our framework efficiently generates high-quality data and learns policies that achieve an approximately 90\% success rate across a diverse set of over 50 objects, including unseen instances. The system's effectiveness is validated through comprehensive evaluations and ablation studies, highlighting its potential for advancing dexterous manipulation capabilities.
-          </p>
-        </div>
+            Achieving human-like manipulation capabilities with dexterous hands for general-purpose robots remains a grand challenge. While recent Vision-Language-Action (VLA) models show promise in learning flexible skills from human-guided demonstrations, their scalability is constrained by the scarcity of high-quality training data. Existing real-robot data collection has certain inherent
+            limitations: fully manual teleoperation imposes excessive cognitive load on human operators, limiting session duration, while automated planning often produces unnatural motions and yields
+            a data distribution that is suboptimal for the learning targeted skillful manipulation.
+            
+            To address this, we propose a Shared Autonomy framework that partitions control along the
+            macro-micro motion domains. A human operator guides the pose of the robot end-effector via
+            intuitive VR teleoperation, while an autonomous DexGrasp-VLA policy, using real-time tactile and
+            local visual feedback, serves as an assistant for fine-grained and force-adaptive hand control. This
+            division of labour significantly reduces human cognitive load and enables the efficient collection of
+            high-quality data of coordinated arm-hand demonstrations with minimum mental fatigue.
+            
+            Leveraging these demonstration data, we train an end-to-end VLA policy enhanced with our
+            proposed novel Arm-Hand Feature Enhancement module. This architecture explicitly captures
+            both the distinct latent features of macro (arm) and micro (hand) movements and their shared
+            representations, resulting in more natural and robust arm-hand coordination. Furthermore, our
+            Corrective Teleoperation system enables continuous policy improvement through human-in-the-loop
+            failure recovery and data augmentation. Experiments show that our framework generates high-
+            quality data with very low manpower requirements and the resulting fine-tuning can effectively
+            learn policies that achieve around 90% success rate across a diverse set of over 50 objects, including
+            unseen instances. The system’s effectiveness is validated through comprehensive evaluations and
+            ablation studies, highlighting its potential to develop dexterous manipulation capabilities.
       </div>
     </div>
   </div>
