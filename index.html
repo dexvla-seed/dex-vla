@@ -278,17 +278,7 @@
                     </a>
                   </span>
 
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
+                 
                 <!-- TODO: Update with your arXiv paper ID -->
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
@@ -320,35 +310,22 @@
 </section>
 
 <!-- Paper abstract -->
-<section class="section hero is-light">
+<section class="section hero is-light" style="padding: 2rem 0.5rem;">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Achieving human-like manipulation capabilities with dexterous hands for general-purpose robots remains a grand challenge. While recent Vision-Language-Action (VLA) models show promise in learning flexible skills from human-guided demonstrations, their scalability is constrained by the scarcity of high-quality training data. Existing real-robot data collection has certain inherent
-            limitations: fully manual teleoperation imposes excessive cognitive load on human operators, limiting session duration, while automated planning often produces unnatural motions and yields
-            a data distribution that is suboptimal for the learning targeted skillful manipulation.
-            
-            To address this, we propose a Shared Autonomy framework that partitions control along the
-            macro-micro motion domains. A human operator guides the pose of the robot end-effector via
-            intuitive VR teleoperation, while an autonomous DexGrasp-VLA policy, using real-time tactile and
-            local visual feedback, serves as an assistant for fine-grained and force-adaptive hand control. This
-            division of labour significantly reduces human cognitive load and enables the efficient collection of
-            high-quality data of coordinated arm-hand demonstrations with minimum mental fatigue.
-            
-            Leveraging these demonstration data, we train an end-to-end VLA policy enhanced with our
-            proposed novel Arm-Hand Feature Enhancement module. This architecture explicitly captures
-            both the distinct latent features of macro (arm) and micro (hand) movements and their shared
-            representations, resulting in more natural and robust arm-hand coordination. Furthermore, our
-            Corrective Teleoperation system enables continuous policy improvement through human-in-the-loop
-            failure recovery and data augmentation. Experiments show that our framework generates high-
-            quality data with very low manpower requirements and the resulting fine-tuning can effectively
-            learn policies that achieve around 90% success rate across a diverse set of over 50 objects, including
-            unseen instances. The system’s effectiveness is validated through comprehensive evaluations and
-            ablation studies, highlighting its potential to develop dexterous manipulation capabilities.
+        <h2 class="title is-3 has-text-centered">Abstract</h2>
+        <div class="content has-text-justified" style="margin-bottom: 0; line-height: 1.6;">
+          
+          <p>Achieving human-like manipulation capabilities with dexterous hands for general-purpose robots remains a grand challenge. While recent Vision-Language-Action (VLA) models show promise in learning flexible skills from human-guided demonstrations, their scalability is constrained by the scarcity of high-quality training data. Existing real-robot data collection has certain inherent limitations: fully manual teleoperation imposes excessive cognitive load on human operators, limiting session duration, while automated planning often produces unnatural motions and yields a data distribution that is suboptimal for learning targeted skillful manipulation.</p>
+          
+          <p>To address this, we propose a <strong>Shared Autonomy</strong> framework that partitions control along the macro-micro motion domains. A human operator guides the pose of the robot end-effector via intuitive VR teleoperation, while an autonomous <strong>DexGrasp-VLA policy</strong>, using real-time tactile and local visual feedback, serves as an assistant for fine-grained and force-adaptive hand control. This division of labour significantly reduces human cognitive load and enables the efficient collection of high-quality data of coordinated arm-hand demonstrations with minimum mental fatigue.</p>
+
+          <p>Leveraging these demonstration data, we train an end-to-end VLA policy enhanced with our proposed novel <strong>Arm-Hand Feature Enhancement</strong>strong> module. This architecture explicitly captures both the distinct latent features of macro (arm) and micro (hand) movements and their shared representations, resulting in more natural and robust arm-hand coordination.</p>
+
+          <p>Furthermore, our <strong>Corrective Teleoperation system</strong> enables continuous policy improvement through human-in-the-loop failure recovery and data augmentation. Experiments show that our framework generates high-quality data with very low manpower requirements and the resulting fine-tuning can effectively learn policies that achieve around <strong>90% success rate</strong> across a diverse set of over <strong>50 objects</strong>, including unseen instances. The system's effectiveness is validated through comprehensive evaluations and ablation studies, highlighting its potential to develop dexterous manipulation capabilities.</p>
+          
+        </div>
       </div>
     </div>
   </div>
